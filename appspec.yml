@@ -1,8 +1,8 @@
 version: 0.0
 os: linux
 files:
-  - source: /
-    destination: /home/ec2-user/application
+  - source: s3://code-build-data/javaProject/target/gs-spring-boot-0.1.0.jar
+    destination: /home/ubuntu/application
 hooks:
   ApplicationStop:
      - location: script_stop_server.sh
